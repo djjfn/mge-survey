@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Enquête - Vos besoins santé</title>
+<title>Enquête – Vos besoins santé</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
  body{font-family:Arial,Helvetica,sans-serif;background:#f7f7f7;margin:0}
@@ -25,8 +25,9 @@
 </head>
 <body>
 <div class="container">
-<h1>Enquête : Vos besoins santé</h1>
-<p>Merci de consacrer 3 minutes à ce questionnaire anonyme. Les réponses guideront l'ouverture d'un nouveau cabinet médical adapté à votre quartier.</p>
+<h1>Enquête : Vos besoins santé</h1>
+<p>Merci de consacrer 3 minutes à ce questionnaire anonyme. Les réponses guideront l'ouverture d'un nouveau cabinet médical adapté à votre quartier.</p>
+
 <form action="https://formspree.io/f/xblobkjz" method="POST">
 <!-- A. Profil -->
 <section>
@@ -38,7 +39,8 @@
 <label class="required">Tranche d'âge</label>
 <select name="TrancheÂge" required>
 <option value="">-- Choisir --</option>
-<option>&lt; 18</option><option>18‑24</option><option>25‑34</option><option>35‑44</option><option>45‑54</option><option>55‑64</option><option>65+</option>
+<option>&lt; 18</option><option>18-24</option><option>25-34</option>
+<option>35-44</option><option>45-54</option><option>55-64</option><option>65+</option>
 </select>
 
 <label class="required">Quartier / commune</label>
@@ -53,7 +55,7 @@
 <label class="required">Consultations avec un généraliste par an</label>
 <select name="FréquenceConsultation" required>
 <option value="">-- Choisir --</option>
-<option>&lt; 1</option><option>1‑2</option><option>3‑5</option><option>&gt; 5</option>
+<option>&lt; 1</option><option>1-2</option><option>3-5</option><option>&gt; 5</option>
 </select>
 </section>
 
@@ -64,13 +66,14 @@
 <label class="required">Temps de trajet maximal pour vous rendre chez le médecin</label>
 <select name="TempsTrajet" required>
 <option value="">-- Choisir --</option>
-<option>≤ 5&nbsp;min</option><option>5‑15&nbsp;min</option><option>15‑30&nbsp;min</option><option>&gt; 30&nbsp;min</option>
+<option>≤ 5&nbsp;min</option><option>5-15&nbsp;min</option>
+<option>15-30&nbsp;min</option><option>&gt; 30&nbsp;min</option>
 </select>
 
 <label class="required">Créneaux horaires préférés <small>(plusieurs choix)</small></label>
-<label><input type="checkbox" name="Créneaux" value="Matin">Matin (8h‑12h)</label>
-<label><input type="checkbox" name="Créneaux" value="Après‑midi">Après‑midi (14h‑18h)</label>
-<label><input type="checkbox" name="Créneaux" value="Soir">Soir (18h‑21h)</label>
+<label><input type="checkbox" name="Créneaux" value="Matin">Matin (8h-12h)</label>
+<label><input type="checkbox" name="Créneaux" value="Après-midi">Après-midi (14h-18h)</label>
+<label><input type="checkbox" name="Créneaux" value="Soir">Soir (18h-21h)</label>
 <label><input type="checkbox" name="Créneaux" value="Samedi">Samedi</label>
 
 <label class="required">Méthode prise de rendez-vous habituelle</label>
@@ -84,8 +87,21 @@
 <section>
 <h2>C. Importance des critères</h2>
 <p>Notez chaque item de 1 (pas important) à 5 (très important).</p>
-<div class="likert-row"><span>Langues parlées</span><span class="scale"><select name="Critère_8" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></span></div>
 
+<div class="likert-row"><span>Délai pour obtenir un RDV</span><span class="scale">
+<select name="Critère_1" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></span></div>
+<div class="likert-row"><span>Temps d'attente sur place</span><span class="scale">
+<select name="Critère_2" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></span></div>
+<div class="likert-row"><span>Écoute et explications du médecin</span><span class="scale">
+<select name="Critère_3" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></span></div>
+<div class="likert-row"><span>Disponibilité par téléphone / WhatsApp</span><span class="scale">
+<select name="Critère_4" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></span></div>
+<div class="likert-row"><span>Télé-consultation vidéo</span><span class="scale">
+<select name="Critère_5" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></span></div>
+<div class="likert-row"><span>Examens de base sur place</span><span class="scale">
+<select name="Critère_6" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></span></div>
+<div class="likert-row"><span>Langues parlées</span><span class="scale">
+<select name="Critère_7" required><option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></span></div>
 </section>
 
 <!-- D. Services souhaités -->
@@ -98,36 +114,37 @@
 <label><input type="checkbox" name="Services" value="Pédiatrie">Pédiatrie</label><br>
 <label><input type="checkbox" name="Services" value="Arrêt tabac">Programme arrêt du tabac</label><br>
 <label><input type="checkbox" name="Services" value="Ateliers nutrition">Ateliers nutrition</label><br>
-<label><input type="checkbox" name="Services" value="Télé‑consultation">Télé‑consultation</label><br>
-<label><input type="checkbox" name="Services" value="Autre">Autre&nbsp;:<br><input type="text" name="Service_Autre"></label>
+<label><input type="checkbox" name="Services" value="Télé-consultation">Télé-consultation</label><br>
+<label><input type="checkbox" name="Services" value="Autre">Autre :<br><input type="text" name="Service_Autre"></label>
 </section>
 
-<!-- E. Télé‑médecine -->
+<!-- E. Télé-médecine -->
 <section>
-<h2>E. Télé‑médecine</h2>
-<label class="required">Avez-vous déjà utilisé la télé‑consultation&nbsp;?</label>
+<h2>E. Télé-médecine</h2>
+<label class="required">Avez-vous déjà utilisé la télé-consultation&nbsp;?</label>
 <label class="checkbox-inline"><input type="radio" name="TeleMed_Exp" value="Oui" required>Oui</label>
 <label class="checkbox-inline"><input type="radio" name="TeleMed_Exp" value="Non">Non</label>
 
-<label>Si oui, comment l'avez-vous évaluée&nbsp;? (1 = très mauvaise ; 5 = excellente)</label>
+<label>Si oui, comment l'avez-vous évaluée&nbsp;? (1 = très mauvaise ; 5 = excellente)</label>
 <select name="TeleMed_Sat">
-<option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select>
+<option value="">--</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option>
+</select>
 
-<label>Motifs pour lesquels vous accepteriez une télé‑consultation&nbsp;:</label>
+<label>Motifs pour lesquels vous accepteriez une télé-consultation&nbsp;:</label>
 <label><input type="checkbox" name="MotifsTele" value="Renouvellement ordonnance">Renouvellement d'ordonnance</label><br>
 <label><input type="checkbox" name="MotifsTele" value="Résultats d'analyse">Résultats d'analyse</label><br>
 <label><input type="checkbox" name="MotifsTele" value="Suivi chronique">Suivi maladie chronique</label><br>
 <label><input type="checkbox" name="MotifsTele" value="Conseil rapide">Conseil rapide</label><br>
-<label><input type="checkbox" name="MotifsTele" value="Autre">Autre&nbsp;:<br><input type="text" name="MotifTele_Autre"></label>
+<label><input type="checkbox" name="MotifsTele" value="Autre">Autre :<br><input type="text" name="MotifTele_Autre"></label>
 </section>
 
 <!-- F. Intention -->
 <section>
 <h2>F. Intention de fréquentation</h2>
-<label class="required">Si un cabinet répondant à vos attentes ouvrait dans votre quartier, consulteriez‑vous&nbsp;?</label>
+<label class="required">Si un cabinet répondant à vos attentes ouvrait dans votre quartier, consulteriez-vous&nbsp;?</label>
 <select name="Intention" required>
 <option value="">-- Choisir --</option>
-<option>Oui, certainement</option><option>Probablement</option><option>Peut‑être</option><option>Non</option>
+<option>Oui, certainement</option><option>Probablement</option><option>Peut-être</option><option>Non</option>
 </select>
 
 <label>Amélioration essentielle qui vous ferait choisir ce cabinet&nbsp;:</label>
